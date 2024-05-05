@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './NavBarMenu.css';
+import { Link } from 'react-router-dom';
 
 const NavBarMenu = () => {
 
@@ -8,26 +9,28 @@ const NavBarMenu = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const MenuContent = () => (
+        <>
+            <Link to={'about'} className="menu-item">About Us</Link>
+            <Link to={'warehouse'} className="menu-item">Warehouse</Link>
+            <Link to={'trucking'} className="menu-item">Trucking</Link>
+            <Link to={'custom-brokerage'} className="menu-item">Custom Brokerage</Link>
+            <Link to={'contact-us'} className="menu-item">Contact Us</Link>
+        </>
+    )
     
     return (
         <>
             <ul className="menu">
-                <li className="menu-item"><a href="#about-us">About Us</a></li>
-                <li className="menu-item"><a href="#warehouse">Warehouse</a></li>
-                <li className="menu-item"><a href="#trucking">Trucking</a></li>
-                <li className="menu-item"><a href="#custom-brokerage">Custom Brokerage</a></li>
-                <li className="menu-item"><a href="#contact-us">Contact Us</a></li>
+                <MenuContent />
             </ul>
             <div className="navbar-burger" onClick={toggleMenu}>
                 <img src='list.svg' width="24" height="24" />
             </div>
             <div className={`mobile-menu ${isOpen ? 'isOpen' : 'isClosed'}`}>
                 <ul>
-                    <li className="menu-item"><a href="#about-us">About Us</a></li>
-                    <li className="menu-item"><a href="#warehouse">Warehouse</a></li>
-                    <li className="menu-item"><a href="#trucking">Trucking</a></li>
-                    <li className="menu-item"><a href="#custom-brokerage">Custom Brokerage</a></li>
-                    <li className="menu-item"><a href="#contact-us">Contact Us</a></li>
+                    <MenuContent />
                 </ul>
             </div>
         </>

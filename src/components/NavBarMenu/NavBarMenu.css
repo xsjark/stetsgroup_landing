@@ -50,6 +50,11 @@ a {
     .mobile-menu li {
         list-style-type: none;
     }
+    
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
 
     .isOpen {
         position: fixed;
