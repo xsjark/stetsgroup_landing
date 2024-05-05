@@ -29,7 +29,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/warehouse',
-        element: <Warehouse />
+        element: <Warehouse />,
+        children: [
+          {
+            path: '/warehouse/bonded-warehouse',
+            element: <Home />
+          }
+        ]
       },
       {
         path: '/trucking',

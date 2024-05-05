@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavBarMenuItem.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBarMenuItem = ({ title, items, route }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +12,18 @@ const NavBarMenuItem = ({ title, items, route }) => {
             onMouseLeave={() => setIsOpen(false)}
         >
             {route ? (
-                 <Link className="menu-text" to={route}>{title}</Link>
+                 <NavLink  className={({ isActive }) => (isActive ? 'active' : '')} to={route}>{title}</NavLink>
+                
+
 
             ) : (
-                <span className="menu-text">{title}</span>
+                <span className={({ isActive }) => (isActive ? 'active' : '')}>{title}</span>
             )}
             {isOpen && (
                 <div className="dropdown-menu">
                     {items.map((item, index) => (
                         <div key={index}>
-                            <Link to={item.route}>{item.name}</Link>
+                            <NavLink  className={({ isActive }) => (isActive ? 'active' : '')}  to={item.route}>{item.name}</NavLink>
                         </div>
                     ))}
                 </div>

@@ -66,7 +66,7 @@ const NavBarMenu = () => {
     }
     const testMenuJSON = {
         'About us': {
-            'route': 'parentroute',
+            'route': '/about-us',
             'items': [
                 {
                     name: 'item1',
@@ -81,8 +81,8 @@ const NavBarMenu = () => {
         'Warehouse': {
             'items': [
                 {
-                    name: 'item1',
-                    route: 'route1'
+                    name: 'Bonded Warehouse',
+                    route: '/warehouse/bonded-warehouse'
                 },
                 {
                     name: 'item2',
