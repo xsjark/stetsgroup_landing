@@ -12,14 +12,14 @@ const NavBarMenu = () => {
 
     const MenuContent = () => (
         <>
-            <Link to={'about'} className="menu-item">About Us</Link>
+            <Link to={'about-us'} className="menu-item">About Us</Link>
             <Link to={'warehouse'} className="menu-item">Warehouse</Link>
             <Link to={'trucking'} className="menu-item">Trucking</Link>
             <Link to={'custom-brokerage'} className="menu-item">Custom Brokerage</Link>
             <Link to={'contact-us'} className="menu-item">Contact Us</Link>
         </>
     )
-    
+
     return (
         <>
             <ul className="menu">

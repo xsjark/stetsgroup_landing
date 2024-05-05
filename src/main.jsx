@@ -7,8 +7,12 @@ import {
 import Root from './Pages/Root/Root.jsx'
 import Home from './Pages/Home/Home.jsx'
 import PageNotFound from './Pages/PageNotFound/PageNotFound.jsx'
-import About from './Pages/About/About.jsx'
-import './App.jsx'
+import AboutUs from './Pages/AboutUs/AboutUs.jsx'
+import './App.css'
+import Warehouse from './Pages/Warehouse/Warehouse.jsx';
+import Trucking from './Pages/Trucking/Trucking.jsx';
+import CustomBrokerage from './Pages/CustomBrokerage/CustomBrokerage.jsx';
+import ContactUs from './Pages/ContactUs/ContactUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +24,24 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/about',
-        element: <About />
+        path: '/about-us',
+        element: <AboutUs />
+      },
+      {
+        path: '/warehouse',
+        element: <Warehouse />
+      },
+      {
+        path: '/trucking',
+        element: <Trucking />
+      },
+      {
+        path: '/custom-brokerage',
+        element: <CustomBrokerage />
+      },
+      {
+        path: '/contact-us',
+        element: <ContactUs />
       },
       {
         path: '*',
