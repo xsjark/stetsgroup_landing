@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./NavBarMenuItem.css";
 import { Link } from "react-router-dom";
 
-const NavBarMenuItem = ({ title, items }) => {
+const NavBarMenuItem = ({ title, items, route }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -11,7 +11,12 @@ const NavBarMenuItem = ({ title, items }) => {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <span className="menu-text">{title}</span>
+            {route ? (
+                 <Link className="menu-text" to={route}>{title}</Link>
+
+            ) : (
+                <span className="menu-text">{title}</span>
+            )}
             {isOpen && (
                 <div className="dropdown-menu">
                     {items.map((item, index) => (
