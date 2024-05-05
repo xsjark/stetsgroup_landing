@@ -13,11 +13,8 @@ const NavBarMenuItem = ({ title, items, route }) => {
         >
             {route ? (
                  <NavLink  className={({ isActive }) => (isActive ? 'active' : '')} to={route}>{title}</NavLink>
-                
-
-
             ) : (
-                <span className={({ isActive }) => (isActive ? 'active' : '')}>{title}</span>
+                <span>{title}</span>
             )}
             {isOpen && (
                 <div className="dropdown-menu">
