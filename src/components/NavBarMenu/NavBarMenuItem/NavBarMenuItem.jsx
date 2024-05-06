@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavBarMenuItem.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBarMenuItem = ({ title, items, route }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,8 @@ const NavBarMenuItem = ({ title, items, route }) => {
                 {title}
             </NavLink>
             {isOpen && (
-                <div className="dropdown-menu" >
+                <div 
+                    className="dropdown-menu">
                     {items.map((item, index) => (
                         <div key={index}>
                             <NavLink
