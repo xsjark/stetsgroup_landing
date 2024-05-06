@@ -13,6 +13,7 @@ import Warehouse from './Pages/Warehouse/Warehouse.jsx';
 import Trucking from './Pages/Trucking/Trucking.jsx';
 import CustomBrokerage from './Pages/CustomBrokerage/CustomBrokerage.jsx';
 import ContactUs from './Pages/ContactUs/ContactUs.jsx';
+import WarehouseRoot from './Pages/Warehouse/WarehouseRoot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,29 +25,29 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/about-us',
+        path: 'about-us',
         element: <AboutUs />
       },
       {
-        path: '/warehouse',
-        element: <Warehouse />,
+        path: 'warehouse',
+        element: <WarehouseRoot />,
         children: [
           {
-            path: '/warehouse/bonded-warehouse',
-            element: <Home />
+            path: 'bonded-warehouse',
+            element: <Warehouse />
           }
         ]
       },
       {
-        path: '/trucking',
+        path: 'trucking',
         element: <Trucking />
       },
       {
-        path: '/custom-brokerage',
+        path: 'custom-brokerage',
         element: <CustomBrokerage />
       },
       {
-        path: '/contact-us',
+        path: 'contact-us',
         element: <ContactUs />
       },
       {

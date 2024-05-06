@@ -10,29 +10,20 @@ const NavBarMenuItem = ({ title, items, route }) => {
             className="navbar-menu-item-container"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
-            style={{ display: 'flex', alignItems: 'center' }}
-
         >
-            {route ? (
-                 <NavLink  
-                    className={({ isActive }) => (isActive ? 'active' : '')} 
-                    to={route} >
-                        {title}
-                    </NavLink>
-            ) : (
-                <span 
-                    className={({ isActive }) => (isActive ? 'active' : '')} >
-                        {title}
-                </span>
-            )}
+            <NavLink
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                to={route} >
+                {title}
+            </NavLink>
             {isOpen && (
                 <div className="dropdown-menu" >
                     {items.map((item, index) => (
                         <div key={index}>
-                            <NavLink 
-                                className={({ isActive }) => (isActive ? 'active' : '')}  
+                            <NavLink
+                                className={({ isActive }) => (isActive ? 'active' : '')}
                                 to={item.route}>
-                                    {item.name}
+                                {item.name}
                             </NavLink>
                         </div>
                     ))}

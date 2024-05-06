@@ -1,6 +1,6 @@
 const Warehouse = () => (
     <>
-        Warehouse
+        Warehouse Content
     </>
 );
 

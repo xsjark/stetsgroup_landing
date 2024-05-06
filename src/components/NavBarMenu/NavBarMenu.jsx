@@ -79,10 +79,11 @@ const NavBarMenu = () => {
             ]
         },
         'Warehouse': {
+            'route': '/warehouse',
             'items': [
                 {
                     name: 'Bonded Warehouse',
-                    route: '/warehouse/bonded-warehouse'
+                    route: 'warehouse/bonded-warehouse'
                 },
                 {
                     name: 'item2',
@@ -91,6 +92,7 @@ const NavBarMenu = () => {
             ]
         },
         'Trucking': {
+            'route': '/trucking',
             'items': [
                 {
                     name: 'item1',
@@ -103,6 +105,7 @@ const NavBarMenu = () => {
             ]
         },
         'Custom Brokerage': {
+            'route': '/custom-brokerage',
             'items': [
                 {
                     name: 'item1',
@@ -115,6 +118,7 @@ const NavBarMenu = () => {
             ]
         },
         'Contact Us': {
+            'route': '/contact-us',
             'items': [
                 {
                     name: 'item1',
