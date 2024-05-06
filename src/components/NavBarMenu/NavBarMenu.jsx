@@ -65,7 +65,7 @@ const NavBarMenu = () => {
         ]
     }
     const testMenuJSON = {
-        'About us': {
+        'About Us': {
             'route': '/about-us',
             'items': [
                 {

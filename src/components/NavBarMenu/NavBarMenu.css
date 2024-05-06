@@ -4,6 +4,8 @@
     margin: 0;
     display: flex;
     gap: 15px;
+    height: 100%;
+    align-items: center;
 }
 
 .menu-item {
